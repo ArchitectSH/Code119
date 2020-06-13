@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+#allTble{
+	margin:auto;		
+}
+
+#titleDiv{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+#fileDiv {
+	margin-right:20px;
+	padding:20px;
+    height: 800px;
+    width: 700px;
+    font-size:17px;
+    align:top;
+}
+
+#mainBtn, #manageCodeBtn, #errorBoxBtn{
+	margin:30px;
+	width:200px;
+}
+
+#emailDiv{
+	margin-bottom:15px;
+}
+
+#logoutDiv{
+	text-align:center;
+}
+
+
+#logoutBtn{
+	width:100px;
+}
+
+#fileTable td{
+	vertical-align:middle;
+	text-align:center;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+#rightPannelTd{
+	vertical-align:top;
+	text-align:center;	
+	padding-top:150px;
+}
+
+#nameTd{
+	padding-left:80px;
+	padding-right:80px;
+}
+
+#createdTd{
+	padding-left:50px;
+	padding-right:50px;
+}
+
+#writerTd{
+	padding-left:80px;
+	padding-right:80px;
+}

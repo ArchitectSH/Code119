@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+#allTble{
+	margin:auto;		
+}
+
+#editor {
+	margin-top:10px;
+	margin-right:20px;
+	padding:20px;
+    height: 400px;
+    width: 730px;
+    font-size:17px;
+    
+    white-space: pre-wrap; /* CSS3*/
+	white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	word-wrap: break-all; /* Internet Explorer 5.5+ */ 
+}
+
+#fileNameTxt1{
+	width:150px;	
+}
+
+#rightPannelTd{
+	vertical-align:top;
+	text-align:center;	
+	padding-top:150px;
+}
+
+#emailLabel, #pwdLabel{
+	width:100px;	
+}
+
+#emailDiv, #pwdDiv{
+	margin-bottom:15px;
+}
+
+#loginBtn{
+	margin-right:20px;
+}
+
+
+#inputTxt{
+	width:530px;
+	height:100px;
+	resize:none;
+}
+
+#tble2 select{
+	width:100px;
+}
+
+#fromSelect{
+	margin-left:300px;
+	margin-bottom:100px;
+}
+
+#resultTxt{
+	width:530px;
+	height:300px;
+	resize:none;
+}
+
+#tble2 td{
+	border:1;
+	padding-top:20px;
+	vertical-align:top;
+}
+
+#runBtnTd{
+	text-align:center;	
+}
+#runBtn{
+	width:80px;
+}
+
+#runBtn{
+	margin-top:15px;
+}
+
+
+#manageCodeBtn, #searchCodeBtn, #errorBoxBtn{
+	margin:30px;
+	width:200px;
+}
+
+#logoutDiv{
+	text-align:center;
+}
+
+#logoutBtn{
+	width:100px;
+}

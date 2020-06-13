@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+ 	
+ 	<!-- <context:annotation-config/>
+ 	<bean id="userDAO" class="com.code119.myapp.dao.UserDAOImpl" />
+ 	<bean id="compileMsgViewDAO" class="com.code119.myapp.dao.CompileMsgViewDAOImpl" />
+ 	<bean id="runtimeMsgViewDAO" class="com.code119.myapp.dao.RuntimeMsgViewDAOImpl" />
+ 	<bean id="fileDAO" class="com.code119.myapp.dao.FileDAOImpl" />
+ 	<bean id="userService" class="com.code119.myapp.service.UserServiceImpl" />
+ 	<bean id="compileMsgService" class="com.code119.myapp.service.CompileMsgServiceImpl" />
+ 	<bean id="fileService" class="com.code119.myapp.service.FileServiceImpl" />
+ 	<bean id="runtimeMsgService" class="com.code119.myapp.service.RuntimeMsgServiceImpl" /> -->
+ 	
+ 	<context:component-scan base-package="com.code119.myapp.dao"></context:component-scan>
+ 	<context:component-scan base-package="com.code119.myapp.service"></context:component-scan>
+ 	<bean id="log" class="com.code119.myapp.businessLogic.LogAdvice" />
+ 	<aop:config>
+		<aop:pointcut id="allPointcut" expression="execution(* com.code119.myapp..*Impl.*(..))" />
+		<aop:aspect ref="log">
+			<aop:before pointcut-ref="allPointcut" method="printLog" />
+		</aop:aspect>
+	</aop:config>
+ 	
+</beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="file">
+     
+    <select id="selectFileByPath" resultType="com.code119.myapp.dto.FileDTO">
+		SELECT *
+		FROM file_tb
+		WHERE path=#{path}
+		ORDER BY path 
+	</select>
+	
+	<select id="selectFileByEmail" resultType="com.code119.myapp.dto.FileDTO">
+		SELECT *
+		FROM file_tb
+		WHERE email=#{email}
+		ORDER BY path 
+	</select>
+    
+    <select id="selectFileByFileName" resultType="com.code119.myapp.dto.FileDTO">
+		SELECT *
+		FROM file_tb
+		WHERE path LIKE CONCAT('%', #{path}, '%')
+		ORDER BY path 
+	</select>
+	
+	<select id="selectFileByEmailLike" resultType="com.code119.myapp.dto.FileDTO">
+		SELECT *
+		FROM file_tb
+		WHERE email LIKE CONCAT('%', #{email}, '%')
+		ORDER BY path 
+	</select>
+	
+    <insert id="insertFile">
+    	INSERT INTO file_tb 
+    	VALUES(#{path},#{email},now(),#{hide})
+    </insert>
+    
+    <delete id="deleteFileByEmail">
+    	DELETE FROM file_tb 
+    	WHERE email=#{email}
+    </delete>
+    
+    <delete id="deleteFileByPath">
+    	DELETE FROM file_tb 
+    	WHERE path=#{path}
+    </delete>
+    
+    <update id="updateFileHide">
+    	UPDATE file_tb
+    	SET hide=#{hide}
+    	WHERE path=#{path}
+    </update>
+</mapper>
